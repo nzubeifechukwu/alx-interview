@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Pascal's triangle'''
 
+
 def pascal_triangle(n):
     '''Returns a list of lists of integers representing the Pascal's triangle
         of height n.
@@ -10,17 +11,17 @@ def pascal_triangle(n):
     if n < 1:
         return []
 
-    triangle = [[1]] # first row is always just 1
+    triangle = [[1]]  # first row is always just 1
 
     for row in range(1, n):
-        inner = [1] # first item in every row is always 1
+        inner = [1]   # first item in every row is always 1
         for col in range(1, row):
             # Except the first and last items, an item at an index i in a given
             # row is equal to the sum of the items at indices i and (i - 1) in
             # the previous row
             inner.append(triangle[row - 1][col] + triangle[row - 1][col - 1])
 
-        inner.append(1) # last item in every row is always 1
+        inner.append(1)  # last item in every row is always 1
         triangle.append(inner)
 
     return triangle
