@@ -11,7 +11,6 @@ def n_queens(n):
     po = set()
     ne = set()
 
-
     def backtrack(r):
         '''Backtrack function'''
         if n == r:
