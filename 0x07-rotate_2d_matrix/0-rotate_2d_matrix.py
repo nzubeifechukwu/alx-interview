@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 '''Rotate an n * n 2D matrix 90 degrees clockwise. Rotate in-place (no return).
     Matrix cannot be empty.
 '''
